@@ -32,9 +32,10 @@ try:
     result = []
     
     service = build('drive', 'v3', credentials=creds)
-    folder_name = 'test'
-    folder_id = '11qeWq4FtIGfSjt-PB5EnDxz067FFkYQx'
-    #query = f"parents='{folder_id}'"
+    
+    #Parent Folder Details
+    folder_name = '' #Example: 'test'
+    folder_id = '11qeWq4FtIGfSjt-PB5EnDxz067FFkYQx' #Example: '11qeWq4FtIGfSjt-PB5EnDxz0s7FFkYyx
     
     #DFS
     res= []
@@ -55,6 +56,7 @@ try:
         
         if not response:
             return
+        
         #Base Case
         if not files: 
             if not res[-1]:
